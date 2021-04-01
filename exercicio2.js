@@ -7,3 +7,4 @@ nomes.forEach((nome) => { //executando o forEach para cada posição dentro do a
 })
 
 essa linha foi modificada no ramo master
+esta linha foi modificada no ramo de teste
