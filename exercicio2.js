@@ -6,3 +6,4 @@ nomes.forEach((nome) => { //executando o forEach para cada posição dentro do a
     nome.innerText = separacao.join(' '); // aplico o método join para juntar os elementos em uma string, passo como separador o espaço. E após isso, passo o novo valor(já aplicado o join)no campo de nome do produto
 })
 
+essa linha foi modificada no ramo master
