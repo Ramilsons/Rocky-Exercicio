@@ -1,0 +1,55 @@
+
+/* TESTANDO O ALIGN-SELF */
+
+section{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+}
+
+section div{
+    background-color: aquamarine;
+    min-height: 150px;
+    width: 90px;
+}
+
+#dois{
+    align-self: stretch;
+}
+
+
+/* TESTANDO O :AFTER E O :BEFORE*/
+
+.elemento {
+    width: 250px ;
+   height: 250px ;
+   background-color: #009966 ;
+   opacity: 1 ;
+   position: relative;
+   margin: 100px auto;
+}
+
+.elemento::after {
+    content : "" ;
+   position: absolute;
+   display : block;
+   width: 250px ;
+   height: 250px ;
+   background-color: #009966 ;
+   opacity:1 ;
+   transform: rotateZ(45deg);
+}
+     
+
+
+/* before */
+
+blockquote::before {
+    content: "\201C"; /* isso representa a aspas duplas na tabela unicode */
+    /* style the quote */
+    color: deepPink;
+    font-size: 3em;
+    position: relative;
+    top: 20px;
+}

@@ -14,17 +14,28 @@ TAGS HTML
 */
 
 /* Adicionando pelo JavaScript */
-var elemento1 = document.createElement("meta")
-elemento1.setAttribute("name", "twitter:card")
-elemento1.setAttribute("content", document.title)
+let elemento = document.createElement("meta")
+adicionaAtributo(elemento, "twitter:card", "summary_large_image")
+
+let elemento1 = document.createElement("meta")
+adicionaAtributo(elemento1, "twitter:title", document.title)
 
 
-var elemento2 = document.createElement("meta")
-elemento2.setAttribute("name", "twitter:image")
-elemento2.setAttribute("content", document.querySelector('.showcase-product__big-img.js-showcase-big-img.ls-is-cached.lazyloaded').src);
+let elemento2 = document.createElement("meta")
+adicionaAtributo(elemento2, "twitter:description", `${document.querySelector(".header-product__title").innerText} com as melhores condições você encontra no site do Magalu. Confira!`)
 
 
-document.querySelector("head").appendChild(elemento1)
-document.querySelector("head").appendChild(elemento2)
+let elemento3 = document.createElement("meta")
+adicionaAtributo(elemento3, "twitter:image", document.querySelector('.showcase-product__big-img.js-showcase-big-img.ls-is-cached.lazyloaded').src);
 
-esta linha foi modificada no ramo de teste
+
+//otimizando 
+function adicionaAtributo(elementoDono, nome, conteudo){
+    elementoDono.setAttribute("name", nome)
+    elementoDono.setAttribute("content", conteudo)
+
+    //inserindo dentro do head
+    document.querySelector("head").appendChild(elementoDono)
+}
+
+
